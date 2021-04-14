@@ -1,23 +1,23 @@
 //https://www.eclipse.org/paho/clients/js/
 
-function Historial_1(message) {
-	
+function Historial_1(variabl) {
+	variabl=1;
 	console.log("Historial_1");
 	/*message = new Paho.MQTT.Message("Historial_1");
     	message.destinationName = "jhsabel@gmail.com/prueba1";
     	client.send(message);
 	*/
-	document.getElementById("sens1").innerHTML=message.payloadString;
+	
 
 	
   
 }
-function Historial_2(){	
+function Historial_2(variabl){	
+	variabl=1;
 	console.log("Historial_2");
 	/*message = new Paho.MQTT.Message("Historial_2");
     	message.destinationName = "jhsabel@gmail.com/prueba1";
     	client.send(message);*/
- 	document.getElementById("sens2").innerHTML=message.payloadString;
 
 }
 
@@ -38,9 +38,10 @@ function Historial_2(){
   client.connect(options);
    
   // called when the client connects
-  function onConnect(cont,i,j) {
+  function onConnect(cont,i,j,variabl) {
  cont=1;
- i=0;
+ i=0;	
+	  variabl=0;
 
     // Once a connection has been made, make a subscription and send a message.
     console.log("Conectado...");
@@ -59,21 +60,29 @@ function Historial_2(){
 
 
   // called when the client loses its connection
-  function onConnectionLost(responseObject,cont,i,j) {
+  function onConnectionLost(responseObject,cont,i,variabl) {
     if (responseObject.errorCode !== 0) {
       console.log("onConnectionLost:"+responseObject.errorMessage);
 	    cont=0;
 	    i=0;
+	    variabl=0;
 	    
     }
   }
 
   // called when a message arrives
-  function onMessageArrived(cont,message) {
+  function onMessageArrived(cont,message,variabl) {
     console.log("onMessageArrived:"+message.payloadString);
 	  mensaje=message.payloadString;
 	 cont=cont+1;
-	
+	  if(variabl == "1")
+	  {
+	document.getElementById("sens1").innerHTML=message.payloadString;
+	  }
+	  if(variabl == "2")
+	  {
+        document.getElementById("sens2").innerHTML=message.payloadString;
+	  }
   }
 
 
