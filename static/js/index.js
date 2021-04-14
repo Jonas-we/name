@@ -59,10 +59,10 @@ function Historial_2(){
   function onMessageArrived(message) {
     console.log("onMessageArrived:"+message.payloadString);
 	  mensaje=message.payloadString;
-	  if(msm[0]=="1"){
+	  if(mensaje[0]=="1"){
 	 document.getElementById("sens1").innerHTML=mensaje;  
 	  }
-	   if(msm[0]=="2"){
+	   if(mensaje[0]=="2"){
 	 document.getElementById("sens2").innerHTML=mensaje;  
 	  }
   }
