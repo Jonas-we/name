@@ -15,14 +15,6 @@ function Historial_2(){
     	client.send(message);
 }
 
-
-
-
-
-
-// Create a client instance
-  //client = new Paho.MQTT.Client("postman.cloudmqtt.com", 14970);
-  
   client = new Paho.MQTT.Client("maqiatto.com", 8883, "web_" + parseInt(Math.random() * 100, 10));
 
   // set callback handlers
@@ -45,7 +37,7 @@ function Historial_2(){
     console.log("Conectado...");
 	
     client.subscribe("jhsabel@gmail.com/prueba1");
-   // message = new Paho.MQTT.Message("CONEXION MaQuiatto , genial UwU");
+   message = new Paho.MQTT.Message("Conexion Establecida");
     message.destinationName = "jhsabel@gmail.com/prueba1";
     client.send(message);
 	
@@ -68,10 +60,10 @@ function Historial_2(){
     console.log("onMessageArrived:"+message.payloadString);
 	  mensaje=message.payloadString;
 	  if(msm[0]=="1"){
-	 document.getElementById("sens1").innerHTML=message.payloadString;  
+	 document.getElementById("sens1").innerHTML=mensaje;  
 	  }
 	   if(msm[0]=="2"){
-	 document.getElementById("sens2").innerHTML=message.payloadString;  
+	 document.getElementById("sens2").innerHTML=mensaje;  
 	  }
   }
   
