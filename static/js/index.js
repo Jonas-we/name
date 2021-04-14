@@ -28,6 +28,7 @@ function Historial_2(){
   // set callback handlers
   client.onConnectionLost = onConnectionLost;
   client.onMessageArrived = onMessageArrived;
+  var contador = 1;
   var options = {
    useSSL: false,
     userName: "jhsabel@gmail.com",
@@ -67,20 +68,27 @@ function Historial_2(){
   }
 
   // called when a message arrives
-  function onMessageArrived(message) {
-	var boton_numero1 = document.getElementById("Historial_1");
-	  	var boton_numero2 = document.getElementById("Historial_2");
-
-boton_numero1.addEventListener("click", cambio_valor);
-	  boton_numero2.addEventListener("click", cambio_valor2);
-
-    console.log("onMessageArrived:"+message.payloadString);
-  function cambio_valor() {
-	  document.getElementById("sens1").innerHTML=message.payloadString;
+  function onMessageArrived(message,contador) {
+	var  num1,num2 ;
+	var boton_numero1 = document.getElementById("Historial_1"); //Declarar boton
+	var boton_numero2 = document.getElementById("Historial_2");
+	boton_numero1.addEventListener("click", cambio_valor);
+	boton_numero2.addEventListener("click", cambio_valor2);
+    	console.log("onMessageArrived:"+message.payloadString);
+	variable=message.payloadString;
+	if(contador % 2 == 0){
+		num1 = variable ;	
+	   }
+  	else
+  	{
+   		num2 = variable ;
+ 	 }
+	  function cambio_valor() {
+	  document.getElementById("sens1").innerHTML=num1;
     }
 	  function cambio_valor2() {
-	  document.getElementById("sens2").innerHTML=message.payloadString;
-    }  
+	  document.getElementById("sens2").innerHTML=num2;
+    }
   }
 
 
