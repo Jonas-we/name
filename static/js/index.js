@@ -69,19 +69,18 @@ function Historial_2(){
   // called when a message arrives
   function onMessageArrived(message) {
 	var boton_numero1 = document.getElementById("Historial_1");
+	  	var boton_numero2 = document.getElementById("Historial_2");
+
 boton_numero1.addEventListener("click", cambio_valor);
+	  boton_numero2.addEventListener("click", cambio_valor2);
+
     console.log("onMessageArrived:"+message.payloadString);
   function cambio_valor() {
 	  document.getElementById("sens1").innerHTML=message.payloadString;
     }
-	  /*if(variabl == "1")
-	  {
-	archivo=message.payloadString;
-	  }
-	  if(variabl == "2")
-	  {
-	archivo2=message.payloadString;
-	  }*/
+	  function cambio_valor2() {
+	  document.getElementById("sens2").innerHTML=message.payloadString;
+    }  
   }
 
 
