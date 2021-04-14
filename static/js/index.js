@@ -39,8 +39,8 @@ function Historial_2(){
    
   // called when the client connects
   function onConnect(cont,i,j) {
-int cont=1;
-int i=0;
+ cont=1;
+ i=0;
 
     // Once a connection has been made, make a subscription and send a message.
     console.log("Conectado...");
