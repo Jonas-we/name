@@ -93,8 +93,8 @@ function Historial_22(){
 	  varit.length[i]=message.payloadString;
 	  }*/  
 	function cambio_valor() {
-	document.getElementById("sens1").innerHTML=message.message.payloadString;
-        document.getElementById("sens2").innerHTML=message.message.payloadString; 
+	document.getElementById("sens1").innerHTML=message.payloadString;
+        document.getElementById("sens2").innerHTML=message.payloadString; 
 	  }
 	  
 
