@@ -84,7 +84,7 @@ function Historial_2(){
    		num2 = variable ;
  	 }
 	  function cambio_valor() {
-	  document.getElementById("sens1").innerHTML=num1;
+	  document.getElementById("sens1").innerHTML=1;
     }
 	  function cambio_valor2() {
 	  document.getElementById("sens2").innerHTML=num2;
