@@ -1,10 +1,7 @@
 //https://www.eclipse.org/paho/clients/js/
 
 function Historial_1() {
-	//variabl=1;
-	console.log("Historial_1");
-	//document.getElementById("sens1").archivo;
-
+	console.log("Historial 1");
 	message = new Paho.MQTT.Message("Historial_1");
     	message.destinationName = "jhsabel@gmail.com/prueba1";
     	client.send(message);
@@ -13,10 +10,7 @@ function Historial_1() {
 
 
 function Historial_2(){	
-	//variabl=1;
-	console.log("Historial_2");
-	//document.getElementById("sens2").archivo2;
-
+	console.log("Historial 2");
 	message = new Paho.MQTT.Message("Historial_2");
     	message.destinationName = "jhsabel@gmail.com/prueba1";
     	client.send(message);
@@ -69,11 +63,12 @@ function Historial_2(){
 
   // called when a message arrives
   function onMessageArrived(message,contador) {
-	var  num1,num2 ;
+	/*var  num1,num2 ;
 	var boton_numero1 = document.getElementById("Historial_1"); //Declarar boton
 	var boton_numero2 = document.getElementById("Historial_2");
 	boton_numero1.addEventListener("click", cambio_valor);
 	boton_numero2.addEventListener("click", cambio_valor2);
+	*/
     	console.log("onMessageArrived:"+message.payloadString);
 	document.getElementById("sens1").innerHTML=message.payloadString;
 
