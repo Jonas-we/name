@@ -83,6 +83,16 @@ function Historial_22(){
 	var i ;
 	var boton_numero1 = document.getElementById("Historial_1"); //Declarar boton
 	var arr = [];
+	  function mueveReloj(){
+ 	   momentoActual = new Date()
+   	 hora = momentoActual.getHours()
+   	 minuto = momentoActual.getMinutes()
+    	segundo = momentoActual.getSeconds()
+	
+ 	   horaImprimible = hora + " : " + minuto + " : " + segundo
+
+ 	   document.form_reloj.reloj.value = horaImprimible
+	}
 	//var boton_numero2 = document.getElementById("Historial_2");
 	boton_numero1.addEventListener("click", cambio_valor);
 	//boton_numero2.addEventListener("click", cambio_valor2);
@@ -93,6 +103,8 @@ function Historial_22(){
 	 /* for (i = 0;i<trr.length;i++){
 	  varit.length[i]=message.payloadString;
 	  }*/
+	  File file = new File("D:\\archivos\\estudiantes.txt");
+	  
 	  for (var i = 0; i <= 10; i++) {
   		 arr[i]=message.payloadString;
 		}
