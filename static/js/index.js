@@ -88,14 +88,13 @@ function Historial_22(){
 	
     	console.log("onMessageArrived:"+message.payloadString);
 	//document.getElementById("sens1").innerHTML=message.payloadString;
-	  for (i = 0;i<10;i++){
+	  trr=message.payloadString
+	  for (i = 0;i<trr.length;i++){
 	  varit.length[i]=message.payloadString;
+	  }  
 	function cambio_valor() {
-		
-	document.getElementById("sens1").innerHTML=message.varit[i];
-        document.getElementById("sens2").innerHTML=message.varit[i];
-
-    }	  
+	document.getElementById("sens1").innerHTML=message.varit;
+        document.getElementById("sens2").innerHTML=message.varit; 
 	  }
 	  
 
