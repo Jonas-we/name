@@ -1,5 +1,5 @@
 //https://www.eclipse.org/paho/clients/js/
-
+/*
 function Historial_1() {
 	console.log("SENSOR 1 PRENDIDO");
 	message = new Paho.MQTT.Message("Historial_1");
@@ -32,6 +32,7 @@ function Historial_22(){
     	client.send(message);
 
 }
+*/
   client = new Paho.MQTT.Client("maqiatto.com", 8883, "web_" + parseInt(Math.random() * 100, 10));
 
   // set callback handlers
@@ -78,15 +79,17 @@ function Historial_22(){
 
   // called when a message arrives
   function onMessageArrived(message,contador) {
-	/*var  num1,num2 ;
+	//var  num1,num2 ;
 	var boton_numero1 = document.getElementById("Historial_1"); //Declarar boton
-	var boton_numero2 = document.getElementById("Historial_2");
+	//var boton_numero2 = document.getElementById("Historial_2");
 	boton_numero1.addEventListener("click", cambio_valor);
-	boton_numero2.addEventListener("click", cambio_valor2);
-	*/
+	//boton_numero2.addEventListener("click", cambio_valor2);
+	
     	console.log("onMessageArrived:"+message.payloadString);
+	//document.getElementById("sens1").innerHTML=message.payloadString;
+function cambio_valor() {
 	document.getElementById("sens1").innerHTML=message.payloadString;
-
+    }
 	  /*
 	variable=message.payloadString;
 	if(contador % 2 == 0){
