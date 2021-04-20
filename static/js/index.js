@@ -88,7 +88,7 @@ function Historial_22(){
 	
     	console.log("onMessageArrived:"+message.payloadString);
 	//document.getElementById("sens1").innerHTML=message.payloadString;
-	  trr=message.payloadString
+	  trr=message.payloadString;
 	 /* for (i = 0;i<trr.length;i++){
 	  varit.length[i]=message.payloadString;
 	  }*/  
