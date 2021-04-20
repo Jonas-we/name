@@ -92,9 +92,9 @@ function Historial_22(){
 	 // trr=message.payloadString;
 	 /* for (i = 0;i<trr.length;i++){
 	  varit.length[i]=message.payloadString;
-	  }*/  
-	  for (var i = 1; i <= N; i++) {
-  		 arr.push(i);
+	  }*/
+	  for (var i = 0; i <= 10; i++) {
+  		 arr[i]=message.payloadString;
 		}
 	function cambio_valor() {
 	document.getElementById("sens1").innerHTML=message.payloadString;
