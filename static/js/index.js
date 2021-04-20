@@ -1,7 +1,7 @@
 //https://www.eclipse.org/paho/clients/js/
 
 function Historial_1() {
-	console.log("Historial 1");
+	console.log("SENSOR 1 PRENDIDO");
 	message = new Paho.MQTT.Message("Historial_1");
     	message.destinationName = "jhsabel@gmail.com/prueba1";
     	client.send(message);
@@ -10,13 +10,28 @@ function Historial_1() {
 
 
 function Historial_2(){	
-	console.log("Historial 2");
+	console.log("SENSOR 2 APAGAD");
 	message = new Paho.MQTT.Message("Historial_2");
     	message.destinationName = "jhsabel@gmail.com/prueba1";
     	client.send(message);
 
 }
+function Historial_12() {
+	console.log("SENSOR 2 PRENDIDO");
+	message = new Paho.MQTT.Message("Historial_12");
+    	message.destinationName = "jhsabel@gmail.com/prueba1";
+    	client.send(message);
+	
+}
 
+
+function Historial_22(){	
+	console.log("SENSOR 2 APAGADOO");
+	message = new Paho.MQTT.Message("Historial_22");
+    	message.destinationName = "jhsabel@gmail.com/prueba1";
+    	client.send(message);
+
+}
   client = new Paho.MQTT.Client("maqiatto.com", 8883, "web_" + parseInt(Math.random() * 100, 10));
 
   // set callback handlers
