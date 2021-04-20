@@ -80,6 +80,7 @@ function Historial_22(){
   // called when a message arrives
   function onMessageArrived(message,contador) {
 	//var  num1,num2 ;
+	  var i ;
 	var boton_numero1 = document.getElementById("Historial_1"); //Declarar boton
 	//var boton_numero2 = document.getElementById("Historial_2");
 	boton_numero1.addEventListener("click", cambio_valor);
@@ -87,11 +88,17 @@ function Historial_22(){
 	
     	console.log("onMessageArrived:"+message.payloadString);
 	//document.getElementById("sens1").innerHTML=message.payloadString;
-function cambio_valor() {
-	document.getElementById("sens1").innerHTML=message.payloadString;
-        document.getElementById("sens2").innerHTML=message.payloadString;
+	  for (i = 0;i<10;i++){
+	  varit.length[i]=message.payloadString;
+	function cambio_valor() {
+		
+	document.getElementById("sens1").innerHTML=message.varit[i];
+        document.getElementById("sens2").innerHTML=message.varit[i];
 
-    }
+    }	  
+	  }
+	  
+
 	  /*
 	variable=message.payloadString;
 	if(contador % 2 == 0){
