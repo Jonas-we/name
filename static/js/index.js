@@ -29,7 +29,6 @@ function Historial_22(){
   // set callback handlers
   client.onConnectionLost = onConnectionLost;
   client.onMessageArrived = onMessageArrived;
-  var contador = 1;
   var options = {
    useSSL: false,
     userName: "jhsabel@gmail.com",
@@ -64,7 +63,7 @@ function Historial_22(){
   }
 
   // called when a message arrives
-  function onMessageArrived(message,contador) {
+  function onMessageArrived(message) {
 	var boton_numero1 = document.getElementById("Historial_1"); //Declarar boton
 	//var boton_numero2 = document.getElementById("Historial_2");
 	boton_numero1.addEventListener("click", cambio_valor);
