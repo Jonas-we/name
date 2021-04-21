@@ -18,9 +18,7 @@
     console.log("Conectado...");
     client.subscribe("jhsabel@gmail.com/prueba1");
     client.subscribe("jhsabel@gmail.com/prueba2");
-   message = new Paho.MQTT.Message("Conexion Establecida");
-   message = new Paho.MQTT.Message("Conexion Establecida");
-	  
+   message = new Paho.MQTT.Message("Conexion Establecida");  
     message.destinationName = "jhsabel@gmail.com/prueba1";
     message.destinationName = "jhsabel@gmail.com/prueba2";
     client.send(message);
