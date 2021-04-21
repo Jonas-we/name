@@ -44,9 +44,15 @@ function Historial_22(){
     // Once a connection has been made, make a subscription and send a message.
     console.log("Conectado...");
     client.subscribe("jhsabel@gmail.com/prueba1");
+    client.subscribe("jhsabel@gmail.com/prueba2");
    message = new Paho.MQTT.Message("Conexion Establecida");
+   message_2 = new Paho.MQTT.Message("Conexion Establecida");
+	  
     message.destinationName = "jhsabel@gmail.com/prueba1";
+    message_2.destinationName = "jhsabel@gmail.com/prueba2";
     client.send(message);
+    client.send(message_2);
+
   }
 
   function doFail(e){
@@ -63,18 +69,18 @@ function Historial_22(){
   }
 
   // called when a message arrives
-  function onMessageArrived(message) {
+  function onMessageArrived(message,message_2) {
 	var boton_numero1 = document.getElementById("Historial_1"); //Declarar boton
 	//var boton_numero2 = document.getElementById("Historial_2");
 	boton_numero1.addEventListener("click", cambio_valor);
 	//boton_numero2.addEventListener("click", cambio_valor2);
-	
-    	console.log("onMessageArrived:"+message.payloadString);
+ 	console.log("onMessageArrived:"+message.payloadString);
+	console.log("onMessageArrived:"+message_2.payloadString);
 	//document.getElementById("sens1").innerHTML=message.payloadString;  
 
 	function cambio_valor() {
 	document.getElementById("sens1").innerHTML=message.payloadString;
-        document.getElementById("sens2").innerHTML=message.payloadString; 
+        document.getElementById("sens2").innerHTML=message_2.payloadString; 
 	  }
   }
 
