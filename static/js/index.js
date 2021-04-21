@@ -75,7 +75,7 @@ function Historial_22(){
 
 	function cambio_valor() {
 	document.getElementById("sens1").innerHTML=message.payloadString;
-        document.getElementById("sens2").innerHTML=arr; 
+        document.getElementById("sens2").innerHTML=message.payloadString; 
 	  }
   }
 
