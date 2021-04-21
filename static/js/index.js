@@ -75,7 +75,7 @@ function Historial_22(){
 	boton_numero1.addEventListener("click", cambio_valor);
 	//boton_numero2.addEventListener("click", cambio_valor2);
  	console.log("onMessageArrived:"+message.payloadString);
-	console.log("onMessageArrived:"+message_2.payloadString);
+	console.log("onMessageArrived_2:"+message_2.payloadString);
 	//document.getElementById("sens1").innerHTML=message.payloadString;  
 
 	function cambio_valor() {
