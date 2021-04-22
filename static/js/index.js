@@ -42,15 +42,18 @@
 	//boton_numero2.addEventListener("click", cambio_valor2);
  	console.log("onMessageArrived:"+message.payloadString);
 	//document.getElementById("sens1").innerHTML=message.payloadString;  
-	  	  var topic = message.destinationName.split("/");
-	if (topic.length == 3){
-		var ioname = topic[1];
-		UpdateElement(ioname, displayClass);
-	}
-
 	function cambio_valor() {
-	document.getElementById("sens1").innerHTML=message.payloadString;
-	  }
+	switch(message.payloadString){
+		case "LED_1_ON":
+			document.getElementById("sens1").innerHTML=message.payloadString;
+			break;
+		case "LED_1_OFF":
+			document.getElementById("sens1").innerHTML=message.payloadString;
+			break;
+		default:
+			document.getElementById("sens3").innerHTML=message.payloadString;
+	}	 
+	}
 
   }
 
