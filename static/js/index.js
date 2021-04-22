@@ -50,8 +50,16 @@
 		case "LED_1_OFF":
 			document.getElementById("sens1").innerHTML=message.payloadString;
 			break;
+		case "LED_2_ON":
+			document.getElementById("sens2").innerHTML=message.payloadString;
+			break;
+		case "LED_2_OFF":
+			document.getElementById("sens2").innerHTML=message.payloadString;
+			break;			
 		default:
 			document.getElementById("sens3").innerHTML=message.payloadString;
+			document.getElementById("sens4").innerHTML=message.payloadString;
+
 	}	 
 	}
 
