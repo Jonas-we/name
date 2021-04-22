@@ -17,7 +17,7 @@ client2.onConnectionLost = onConnectionLost_2;
 
   // connect the client
   client.connect(options);
-  client2.connect(optipms);
+  client2.connect(options);
   // called when the client connects
   function onConnect(){
     // Once a connection has been made, make a subscription and send a message.
