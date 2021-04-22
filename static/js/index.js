@@ -60,8 +60,25 @@
 
 	}
 	  	function cambio_valor() {
-document.getElementById("sens3").innerHTML=message.payloadString;
+			switch(message.payloadString){
+		case "LED_1_ON":
+			document.getElementById("sens5").innerHTML=message.payloadString;
+			break;
+		case "LED_1_OFF":
+			document.getElementById("sens5").innerHTML=message.payloadString;
+			break;
+		case "LED_2_ON":
+			document.getElementById("sens6").innerHTML=message.payloadString;
+			break;
+		case "LED_2_OFF":
+			document.getElementById("sens6").innerHTML=message.payloadString;
+			break;			
+		default:
+			document.getElementById("sens3").innerHTML=message.payloadString;
 			document.getElementById("sens4").innerHTML=message.payloadString;
+
+	}
+			
 	}
 
   }
