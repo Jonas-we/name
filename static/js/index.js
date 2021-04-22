@@ -57,7 +57,6 @@
 			break;			
 		default:
 			
-
 	}
 	  	function cambio_valor() {
 			switch(message.payloadString){
