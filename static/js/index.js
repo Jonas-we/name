@@ -42,7 +42,6 @@
 	//boton_numero2.addEventListener("click", cambio_valor2);
  	console.log("onMessageArrived:"+message.payloadString);
 	//document.getElementById("sens1").innerHTML=message.payloadString;  
-	function cambio_valor() {
 	switch(message.payloadString){
 		case "LED_1_ON":
 			document.getElementById("sens1").innerHTML=message.payloadString;
@@ -57,10 +56,12 @@
 			document.getElementById("sens2").innerHTML=message.payloadString;
 			break;			
 		default:
-			document.getElementById("sens3").innerHTML=message.payloadString;
-			document.getElementById("sens4").innerHTML=message.payloadString;
+			
 
-	}	 
+	}
+	  	function cambio_valor() {
+document.getElementById("sens3").innerHTML=message.payloadString;
+			document.getElementById("sens4").innerHTML=message.payloadString;
 	}
 
   }
