@@ -4,7 +4,7 @@
  client.onConnectionLost = onConnectionLost;
  client.onMessageArrived = onMessageArrived;
 ///------------------------------------------
-client2.onConnectionLost = onConnectionLost_1;
+client2.onConnectionLost = onConnectionLost_2;
  client2.onMessageArrived = onMessageArrived_2;
 //----------------------------------------------
   var options = {
